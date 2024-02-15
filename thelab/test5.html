@@ -1,0 +1,36 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>The Lab -- test5</title>
+        </head>
+        <body>
+            <article>
+                <h1>
+			test5
+		</h1>
+                <div class="image-container">
+                    <img class="front-image" src="de foto is er nu niet" alt="test5" oncontextmenu="return false;">
+                    <img class="back-image" src="de foto is er nu niet" alt="test5" oncontextmenu="return false;">
+                </div>
+                
+				        
+                    <div class="copyContainer">
+                    <div class="options">
+                        <button class="copyButton">Copy</button>
+                        <div class="language"><h3>Python</h3></div>
+                    </div>
+                    <pre>
+                        <code id="code" class="language-python code">
+                        
+					                     import pandas as pd                     import numpy as np                      # Lees de data in                     data = pd.read_csv("data.csv")                      # Bereken de gemiddelde score voor elke methode                     traditional_mean = np.mean(data[data["method"] == "traditional"])                     online_mean = np.mean(data[data["method"] == "online"])                     blended_mean = np.mean(data[data["method"] == "blended"])                      # Vergelijk de gemiddelde scores                     print("Traditioneel:", traditional_mean)                     print("Online:", online_mean)                     print("Blended:", blended_mean)                      # T-test                     t_test = scipy.stats.ttest_ind(data[data["method"] == "traditional"], data[data["method"] == "blended"])                     print("T-test:", t_test.pvalue)                 
+				
+                        </code>
+                        </pre>
+                    </div>
+            </article>
+        </body>
+        </html>
+        
