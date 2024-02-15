@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lab -- test11</title>
+</head>
+<body>
+    <article>
+        <h1>test11</h1>
+
+        <div class="image-container">
+            <img class="front-image" src="dnkf" alt="test11" oncontextmenu="return false;">
+            <img class="back-image" src="dnkf" alt="test11" oncontextmenu="return false;">
+        </div>
+        
+              
+    <div class="copyContainer">
+        <div class="options">
+            <button class="copyButton">Copy</button>
+            <div class="language"><h3>javascript</h3></div>
+        </div>
+        <pre>
+            <code id="code" class="language-javascript code">
+                    var copyText = button.closest('.copyContainer').querySelector('.code');
+    navigator.clipboard.writeText(copyText.textContent)
+      .then(() => {
+        var message = document.createElement('div');
+        message.classList.add('message');
+        message.id = 'message';
+        message.textContent = 'Copying to clipboard was successful!';
+        document.body.appendChild(message);
+        setTimeout(function() {
+          document.body.removeChild(message);
+        }, 3000);
+      })
+      .catch(err => {
+        alert('Could not copy text: ', err);
+      });
+  });
+            </code>
+        </pre>
+    </div>      
+    <div class="copyContainer">
+        <div class="options">
+            <button class="copyButton">Copy</button>
+            <div class="language"><h3>python</h3></div>
+        </div>
+        <pre>
+            <code id="code" class="language-python code">
+                
+import pandas as pd
+import numpy as np
+
+# Lees de data in
+data = pd.read_csv("data.csv")
+
+# Bereken de gemiddelde score voor elke methode
+traditional_mean = np.mean(data[data["method"] == "traditional"])
+online_mean = np.mean(data[data["method"] == "online"])
+blended_mean = np.mean(data[data["method"] == "blended"])
+
+# Vergelijk de gemiddelde scores
+print("Traditioneel:", traditional_mean)
+print("Online:", online_mean)
+print("Blended:", blended_mean)
+
+# T-test
+t_test = scipy.stats.ttest_ind(data[data["method"] == "traditional"], data[data["method"] == "blended"])
+print("T-test:", t_test.pvalue)
+                
+            </code>
+        </pre>
+    </div>      
+    <div class="copyContainer">
+        <div class="options">
+            <button class="copyButton">Copy</button>
+            <div class="language"><h3>css</h3></div>
+        </div>
+        <pre>
+            <code id="code" class="language-css code">
+                
+button {
+    display: block;
+    background-color: var(--groen);
+    color: var(--black);
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: -80px;
+    margin-left: 35px;
+    margin-top: 50px;
+}
+                
+            </code>
+        </pre>
+    </div>
+    </article>
+</body>
+</html>
