@@ -1,0 +1,47 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>The Lab -- test9</title>
+        </head>
+        <body>
+            <article>
+                <h1>
+                test9
+                </h1>
+                <div class="image-container">
+                    <img class="front-image" src="foto" alt="test9" oncontextmenu="return false;">
+                    <img class="back-image" src="foto" alt="test9" oncontextmenu="return false;">
+                </div>
+                      
+                    <div class="copyContainer">
+                        <div class="options">
+                            <button class="copyButton">Copy</button>
+                            <div class="language"><h3>Python</h3></div>
+                        </div>
+                        <pre>
+                            <code id="code" class="language-python code">
+                                    var copyText = button.closest('.copyContainer').querySelector('.code');
+    navigator.clipboard.writeText(copyText.textContent)
+      .then(() => {
+        var message = document.createElement('div');
+        message.classList.add('message');
+        message.id = 'message';
+        message.textContent = 'Copying to clipboard was successful!';
+        document.body.appendChild(message);
+        setTimeout(function() {
+          document.body.removeChild(message);
+        }, 3000);
+      })
+      .catch(err => {
+        alert('Could not copy text: ', err);
+      });
+                            </code>
+                        </pre>
+                    </div>
+            </article>
+        </body>
+        </html>
+        
